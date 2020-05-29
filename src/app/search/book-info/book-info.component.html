@@ -1,28 +1,28 @@
 <mat-card class="example-card">
   <mat-card-header>
     <div class="mat-card-header-data">
-      <mat-card-title>{{ bookInfo.volumeInfo?.title }}</mat-card-title>
-      <mat-card-subtitle>{{ bookInfo.volumeInfo?.subtitle }}</mat-card-subtitle>
+      <mat-card-title>{{ bookInfo?.volumeInfo?.title }}</mat-card-title>
+      <mat-card-subtitle>{{ bookInfo?.volumeInfo?.subtitle }}</mat-card-subtitle>
     </div>
   </mat-card-header>
   <img
     mat-card-image
-    src="{{ bookInfo.volumeInfo?.imageLinks.smallThumbnail }}"
-    alt="{{ bookInfo.volumeInfo?.title }}"
+    src="{{ bookInfo?.volumeInfo?.imageLinks.smallThumbnail }}"
+    alt="{{ bookInfo?.volumeInfo?.title }}"
   />
   <mat-card-content>
     <div class="authText">
       <!-- <p><strong>Rating:</strong><star-rating class="starImg" value="{{bookInfo.volumeInfo?.averageRating}}" totalstars="5" checkedcolor="gold" uncheckedcolor="#aba2a2" size="20px" readonly="false"></star-rating> </p> -->
-      <p><strong>Publisher:</strong> {{ bookInfo.volumeInfo?.publisher }}</p>
-      <p><strong>Page Count:</strong> {{ bookInfo.volumeInfo?.pageCount }}</p>
-      <p><strong>Language:</strong> {{ bookInfo.volumeInfo?.language }}</p>
+      <p><strong>Publisher:</strong> {{ bookInfo?.volumeInfo?.publisher }}</p>
+      <p><strong>Page Count:</strong> {{ bookInfo?.volumeInfo?.pageCount }}</p>
+      <p><strong>Language:</strong> {{ bookInfo?.volumeInfo?.language }}</p>
     </div>
     <p class="tex-content">
-      {{ bookInfo.volumeInfo?.description }}
+      {{ bookInfo?.volumeInfo?.description }}
     </p>
     <div class="authText">
       <p><strong>Written By:</strong></p>
-      <p>{{ bookInfo.volumeInfo?.authors }}</p>
+      <p>{{ bookInfo?.volumeInfo?.authors }}</p>
     </div>
   </mat-card-content>
   <mat-card-actions id="btns">

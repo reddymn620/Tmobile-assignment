@@ -6,6 +6,7 @@ import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/models/app.state';
 import * as BookActions from './../../store/actions/book.actions';
 import { Subscription } from 'rxjs';
+import { BookDetails } from 'src/app/models/book.model';
 
 @Component({
   selector: 'app-book-info',
@@ -14,7 +15,7 @@ import { Subscription } from 'rxjs';
 })
 export class BookInfoComponent implements OnInit, OnDestroy {
   public bookId;
-  public bookInfo = [];
+  public bookInfo;
   getBookId: Subscription;
   getBookInfo: Subscription;
 

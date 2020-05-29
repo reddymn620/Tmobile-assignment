@@ -13,7 +13,7 @@ import { CollectionItems } from '../store/models/collection-item.model';
   styleUrls: ['./main-nav.component.scss'],
 })
 export class MainNavComponent {
-  cart: BookItems[] = [];
+  cart;
   collection: CollectionItems[] = [];
 
   isHandset$: Observable<boolean> = this.breakpointObserver
