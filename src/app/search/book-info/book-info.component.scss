@@ -1,0 +1,51 @@
+.mat-card {
+  padding: 10px 25px 10px 10px;
+}
+.example-card {
+  width: 56%;
+  margin: 5% 20% 0;
+}
+.example-header-image {
+  background-size: cover;
+}
+.mat-card-image {
+  float: right;
+  width: 50px;
+  height: 65px;
+}
+.mat-card-header {
+  display: inline-block;
+}
+.mat-card-header-data {
+  margin: 0;
+}
+.mat-card-title,
+.mat-card-subtitle {
+  width: 300px;
+}
+.mat-card-title {
+  font-size: 15px;
+}
+.mat-card-subtitle,
+.mat-card-content {
+  font-size: 10px;
+}
+.mat-card-content {
+  color: #000;
+  clear: both;
+}
+.tex-content {
+  width: 100%;
+  text-align: justify;
+}
+.authText {
+  line-height: 14px;
+  margin-top: 22px;
+}
+.starImg {
+  display: inline-block;
+}
+#btns {
+  padding: 0;
+  margin: 0;
+}

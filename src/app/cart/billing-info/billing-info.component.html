@@ -1,0 +1,44 @@
+<div class="bill-info">
+  <img
+    class="receiptImg"
+    src="./assets/images/receipt-icon.jpg"
+    alt="receipt-icon"
+  />
+
+  <div class="example-container">
+    <p class="headText">Billing Info</p>
+    <form [formGroup]="cartForm" (ngSubmit)="onSubmit()" class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Your name</mat-label>
+        <input matInput formControlName="name" type="text" />
+        <mat-error *ngIf="cartForm.get('name').invalid">Please enter the name</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Your email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email" />
+        <mat-error *ngIf="cartForm.get('email').invalid">Please enter the valid email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Your phone number</mat-label>
+        <input type="tel" matInput formControlName="phone" />
+        <mat-error *ngIf="cartForm.get('phone').invalid">Please enter the valid phone number</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Your Address</mat-label>
+        <textarea matInput formControlName="address"></textarea>
+        <mat-hint>Please enter your correct address</mat-hint>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="accent"
+        id="cartBtn"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

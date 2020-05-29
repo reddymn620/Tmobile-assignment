@@ -1,0 +1,28 @@
+<div>
+  <form [formGroup]="searchForm" class="example-form">
+    <mat-form-field class="example-full-width">
+      <input
+        (keyup)="searchTerm.next($event)"
+        formControlName="search"
+        type="text"
+        matInput
+        placeholder="Search in Library"
+      />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+
+    <div *ngIf="loading">
+      <p class="search-msg">Searching</p>
+      <mat-spinner></mat-spinner>
+    </div>
+  </form>
+
+  <button *ngIf="searchResults" class="searchResultsDiv" type="button">
+    <div
+      *ngFor="let searchData of searchResults"
+      (click)="goToBookInfo(searchData)"
+    >
+      <app-book-list [result]="searchData"></app-book-list>
+    </div>
+  </button>
+</div>

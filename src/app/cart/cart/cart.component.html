@@ -1,0 +1,15 @@
+<div class="headingText" *ngIf="cart.cart.length <= 0">
+  <p><strong>Your Cart is Empty </strong></p>
+  <a mat-raised-button color="accent" [routerLink] = "'/'">Start Add Books</a>
+ </div>
+
+<button *ngIf="books" class="searchResultsDiv" type="button">
+  <div *ngFor="let searchData of books.cart; let i = index">
+    <app-book-list
+      (click)="deleteBook(searchData.id)"
+      [result]="searchData"
+      [show]="show"
+      (purchaseBookInfo)="purchaseBtnClick($event)"
+    ></app-book-list>
+  </div>
+</button>

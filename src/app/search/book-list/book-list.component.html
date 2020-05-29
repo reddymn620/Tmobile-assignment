@@ -1,0 +1,33 @@
+<mat-card class="example-card" *ngIf="result">
+  <mat-card-header>
+    <div class="mat-card-header-data">
+      <mat-card-title>{{ result.volumeInfo?.title }}</mat-card-title>
+      <mat-card-subtitle>{{ result.volumeInfo?.subtitle }}</mat-card-subtitle>
+    </div>
+  </mat-card-header>
+  <img
+    mat-card-image
+    src="{{ result.volumeInfo?.imageLinks.smallThumbnail }}"
+    alt="{{ result.volumeInfo?.title }}"
+  />
+  <mat-card-content>
+    <p class="tex-content">
+      {{ result.volumeInfo?.description }}
+    </p>
+    <div class="authText">
+      <p><strong>Written By:</strong></p>
+      <p>{{ result.volumeInfo?.authors }}</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="actionBtns" *ngIf="show">
+    <button
+      (click)="purchaseBook(result)"
+      mat-raised-button
+      color="accent"
+      id="purchaseBtn"
+    >
+      Proceed to purchase
+    </button>
+    <button mat-raised-button color="accent" id="cancelBook">Cancel</button>
+  </mat-card-actions>
+</mat-card>

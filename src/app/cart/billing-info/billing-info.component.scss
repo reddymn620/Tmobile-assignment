@@ -1,0 +1,37 @@
+.bill-info {
+  width: 60%;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  margin: auto;
+  margin-top: 7%;
+  border-radius: 5px;
+}
+.receiptImg {
+  width: 50%;
+  height: 364px;
+  display: inline-block;
+  margin-bottom: -3px;
+}
+.example-container {
+  width: 50%;
+  float: right;
+  background-color: #dadada6e;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.example-full-width {
+  width: 100%;
+}
+.headText {
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 10px;
+}
+#cartBtn {
+  float: right;
+  margin-top: 20px;
+}

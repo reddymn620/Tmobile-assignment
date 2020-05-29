@@ -1,0 +1,38 @@
+<div class="headingText" *ngIf="collection.length <= 0">
+  <p><strong>Your My Collection is Empty </strong></p>
+  <a mat-raised-button color="accent" [routerLink] = "'/'">Start Add Books</a>
+</div>
+
+<div *ngFor="let result of collectionInfo">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div class="mat-card-header-data">
+        <mat-card-title>{{ result.bookInfo.volumeInfo?.title }}</mat-card-title>
+        <mat-card-subtitle>{{
+          result.bookInfo.volumeInfo?.subtitle
+        }}</mat-card-subtitle>
+      </div>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="{{ result.bookInfo.volumeInfo?.imageLinks.smallThumbnail }}"
+      alt="{{ result.bookInfo.volumeInfo?.title }}"
+    />
+    <mat-card-content>
+      <p class="tex-content">
+        {{ result.bookInfo.volumeInfo?.description }}
+      </p>
+      <div class="authText">
+        <p><strong>Written By:</strong></p>
+        <p>{{ result.bookInfo.volumeInfo?.authors }}</p>
+      </div>
+      <div class="authText">
+        <p><strong>Billing Address:</strong></p>
+        <p><strong>Name:</strong>{{ result.billingInfo.name }}</p>
+        <p><strong>Email:</strong> {{ result.billingInfo.email }}</p>
+        <p><strong>Phone:</strong>{{ result.billingInfo.phone }}</p>
+        <p><strong>Address:</strong>{{ result.billingInfo.address }}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
