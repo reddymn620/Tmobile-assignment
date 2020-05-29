@@ -35,7 +35,9 @@ export class SearchComponent implements OnInit {
     this.searchTerm
       .pipe(
         map((e: any) => {
-          console.log(e.target.value);
+          this.store.dispatch(
+            new BookActions.SearchString(e.target.value)
+          );
           return e.target.value;
         }),
         debounceTime(400),
