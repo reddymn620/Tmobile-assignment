@@ -1,11 +1,8 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { BookItems } from 'src/app/store/models/book-item.model';
-import { Observable } from 'rxjs';
 import { AppState } from 'src/app/store/models/app.state';
 import * as BookActions from './../../store/actions/book.actions';
 import { Router } from '@angular/router';
-import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-cart',
