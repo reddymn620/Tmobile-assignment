@@ -6,8 +6,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import { MatBadgeModule } from '@angular/material/badge';
 import { MainNavComponent } from './main-nav.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { StoreModule } from '@ngrx/store';
+import { BookReducer } from '../store/reducers/book.reducer';
+import { CollectionReducer } from '../store/reducers/collection.reducer';
 
 describe('MainNavComponent', () => {
   let component: MainNavComponent;
@@ -24,6 +28,9 @@ describe('MainNavComponent', () => {
         MatListModule,
         MatSidenavModule,
         MatToolbarModule,
+        MatBadgeModule,
+        RouterTestingModule,
+        StoreModule.forRoot({ book: BookReducer, collection: CollectionReducer }),
       ]
     }).compileComponents();
   }));
